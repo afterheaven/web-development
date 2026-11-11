@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Productivity Dashboard</title>
+    <!-- CSS and JS are linked correctly here -->
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+
+    <header class="app-header">
+        <h1>Dashboard Hub</h1>
+        <!-- TODO: Part 3, Feature B - Add a button or toggle element for customization here -->
+        <button id="theme-toggle" class="theme-toggle">Toggle Theme</button>
+    </header>
+
+    <main class="dashboard-grid">
+        <!-- Section A: The Input Form Card -->
+        <section class="card form-section">
+            <h2>Add New Task</h2>
+            <form id="task-form">
+                <label for="task-name">Task Name</label>
+                <input type="text" id="task-name" placeholder="e.g., Study JavaScript" required>
+
+                <label for="task-priority">Priority Level</label>
+                <select id="task-priority">
+                    <option value="low">Low Priority</option>
+                    <option value="medium">Medium Priority</option>
+                    <option value="high">High Priority</option>
+                </select>
+
+                <button type="submit" id="submit-btn">Add Task</button>
+            </form>
+            <!-- Error message container (Hidden by default or empty) -->
+            <p id="error-message" class="error-text"></p>
+        </section>
+
+        <!-- Section B: The Live Output Container -->
+        <section class="card list-section">
+            <h2>My Tasks</h2>
+            <!-- This is where your JavaScript should dynamically insert new elements -->
+            <ul id="task-list">
+                <!-- Example item to show structure (students should delete or overwrite via JS) -->
+                <li class="task-item priority-medium">
+                    <span>Example Task (Delete Me)</span>
+                    <span class="badge">Medium</span>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+</body>
+</html>
